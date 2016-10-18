@@ -1,0 +1,11 @@
+<div class="container-element box box-blue">
+    <input type="text" name="name" value="" placeholder="Digite o nome de um ingrediente" class="form-control" ng-keyup="$event.keyCode == 13 && tagFieldCtrl.insertIngredient(tagFieldCtrl.newIngredient)" ng-model="tagFieldCtrl.newIngredient">
+    <h3></h3>
+    <ul class="itemlist">
+        <li ng-repeat="ingredient in tagFieldCtrl.ingredients">
+            {{ingredient.name}}
+            <span ng-click="tagFieldCtrl.ingredients.splice($index, 1)">x</span>
+        </li>
+    </ul>
+    <div class="clearfix"></div>
+</div>

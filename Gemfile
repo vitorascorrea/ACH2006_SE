@@ -49,3 +49,4 @@ gem "rspec-rails", :group => [:development, :test]
 gem "angularjs-rails"
 gem 'responders', '~> 2.0'
 gem "twitter-bootstrap-rails"
+gem 'lodash-rails'

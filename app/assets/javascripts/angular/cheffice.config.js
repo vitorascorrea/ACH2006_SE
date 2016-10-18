@@ -1,1 +1,1 @@
-angular.module("Cheffice", ['ngResource']);
+angular.module("Cheffice", ['ngResource', 'dndLists']);
