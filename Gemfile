@@ -50,3 +50,4 @@ gem 'responders', '~> 2.0'
 gem "twitter-bootstrap-rails"
 gem 'lodash-rails'
 gem 'rails_12factor', group: :production
+gem 'sprockets', '2.12.3'
