@@ -52,3 +52,4 @@ gem "twitter-bootstrap-rails"
 gem 'lodash-rails'
 gem 'rails_12factor', group: :production
 gem 'rake', :group => [:test]
+gem 'mime-types-data', '~> 3.2016.0521'
