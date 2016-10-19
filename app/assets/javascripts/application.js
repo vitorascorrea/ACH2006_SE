@@ -17,5 +17,4 @@
 //= require angular-resource
 //= require lodash
 //= require angular-drag-n-drop
-//= require angular/tagFieldDirective/tagFieldDirective.js
 //= require_tree .
