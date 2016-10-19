@@ -17,7 +17,7 @@ function directive(){
     ////////////
 
     function searchRecipes(){
-      console.log($scope.ingredients);
+      // console.log($scope.ingredients);
     }
   }
 

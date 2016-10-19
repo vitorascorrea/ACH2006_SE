@@ -18,7 +18,7 @@ class IngredientsController < ApplicationController
     respond_with Ingredient.update(params[:id], ingredients_params)
   end
 
-  def delete
+  def destroy
     respond_with Ingredient.destroy(params[:id])
   end
 

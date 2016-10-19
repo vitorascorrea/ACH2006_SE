@@ -4,7 +4,7 @@
     <ul class="itemlist">
         <li ng-repeat="ingredient in ingredients">
             {{ingredient.name}}
-            <span ng-click="ingredients.splice($index, 1)" style="cursor: pointer">x</span>
+            <span ng-click="ingredients.splice($index, 1) && tagFieldCtrl.deleteIngredient(ingredient)" style="cursor: pointer">x</span>
         </li>
     </ul>
     <div class="clearfix"></div>

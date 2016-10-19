@@ -39,3 +39,13 @@ body,html {
 .container-element {
     margin: 10px;
 }
+
+select:required:invalid {
+color: #999;
+}
+option[value=””][disabled] {
+display: none;
+}
+option {
+color: #000;
+}
