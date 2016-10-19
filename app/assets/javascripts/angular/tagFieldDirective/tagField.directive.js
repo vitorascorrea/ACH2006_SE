@@ -12,7 +12,6 @@ function directive(){
   function controller($scope, $resource){
     var ctrl = this;
     //var initialization
-    ctrl.api = $resource("/ingredients/");
     ctrl.insertIngredient = insertIngredient;
 
     //initialization
@@ -21,16 +20,34 @@ function directive(){
     ///////////////////////////
 
     function start(){
-      ctrl.ingredients = ctrl.api.query();
+      getIngredients();
     }
 
     function insertIngredient(ingredient){
       if(ingredient.length > 0){
-        var new_ingredient = {id: 22, name: ingredient};
-        ctrl.ingredients.push(new_ingredient);
-        ctrl.newIngredient = "";
+        var new_ingredient = {
+          'name': ingredient
+        };
+        console.log(angular.toJson(new_ingredient));
+        postIngredient(angular.toJson(new_ingredient));
       }
     }
+
+    function getIngredients(){
+      $resource("/ingredients/").query().$promise.then(function(ingredients){
+        $scope.ingredients = ingredients;
+        console.log(ingredients);
+      });
+    }
+
+    function postIngredient(ingredient){
+      $resource("/ingredients/").save(ingredient).$promise.then(function(ingredient){
+        // $scope.ingredients.push(ingredients);
+      }, function(error){
+        console.log(error);
+      });
+    }
+
   }
 
 }

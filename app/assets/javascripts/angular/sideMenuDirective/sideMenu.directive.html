@@ -9,60 +9,10 @@
     <div class="row">
       <div class="col-md-3" style="padding: 0">
         <tag-field></tag-field>
-        <div class="panel-group" id="accordion" style="width: 110%; margin: 0">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                Collapsible Group 1</a>
-              </h4>
-            </div>
-            <div id="collapse1" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat.</div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                Collapsible Group 2</a>
-              </h4>
-            </div>
-            <div id="collapse2" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat.</div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                Collapsible Group 3</a>
-              </h4>
-            </div>
-            <div id="collapse3" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat.</div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-3 text-center"><a class="btn btn-primary btn-lg" ng-click="sideMenuCtrl.searchRecipes()">Surpreenda-me!</a></div>
+    </div>
   </div>
-</div>
-
-<div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-        <li ng-repeat="ingredient in sideMenuCtrl.ingredients">
-            <a href="#">{{ingredient.name}}</a>
-        </li>
-    </ul>
-
 </div>

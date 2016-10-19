@@ -10,7 +10,15 @@ function directive(){
   }
 
   function controller($scope){
+    var ctrl = this;
+    //public methods
+    ctrl.searchRecipes = searchRecipes;
 
+    ////////////
+
+    function searchRecipes(){
+      console.log($scope.ingredients);
+    }
   }
 
 }
