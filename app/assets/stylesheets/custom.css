@@ -13,6 +13,9 @@ body,html {
 }
 
 .sidebar{
+  position: fixed;
+  display: block;
+  left: 0;
   background-color: orange;
 }
 
