@@ -1,5 +1,5 @@
 <div class="container-element box box-blue">
-    <input type="text" name="name" value="" placeholder="Digite o nome de um ingrediente" class="form-control" ng-keyup="$event.keyCode == 13 && tagFieldCtrl.insertIngredient(tagFieldCtrl.newIngredient)" ng-model="tagFieldCtrl.newIngredient">
+    <input type="text" id="ingredient_name" value="" placeholder="Digite o nome de um ingrediente" class="form-control ingredient_name" ng-keyup="$event.keyCode == 13 && tagFieldCtrl.insertIngredient(tagFieldCtrl.newIngredient)" ng-model="tagFieldCtrl.newIngredient">
     <h3></h3>
     <ul class="itemlist">
         <li ng-repeat="ingredient in ingredients">

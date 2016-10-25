@@ -35,6 +35,17 @@ gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem "rspec-rails"
+  gem "capybara"
+  gem 'selenium-webdriver'
+  gem 'poltergeist'
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  gem "angularjs-rails"
+  gem 'responders', '~> 2.0'
+  gem "twitter-bootstrap-rails"
+  gem 'lodash-rails'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
 end
 
 group :development do
@@ -45,11 +56,6 @@ group :development do
   gem 'spring'
 end
 
-gem "rspec-rails", :group => [:development, :test]
-gem "angularjs-rails"
-gem 'responders', '~> 2.0'
-gem "twitter-bootstrap-rails"
-gem 'lodash-rails'
 gem 'rails_12factor', group: :production
 gem 'rake', :group => [:test]
 gem 'mime-types-data', '~> 3.2016.0521'
