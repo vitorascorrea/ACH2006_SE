@@ -12,9 +12,9 @@ Funcionalidade: Realizar a inserção de um ingrediente
     E eu pressionar a tecla Enter
     Então eu deveria ver o ingrediente "ovo"
 
-    @javascript
-    Cenario: Inserção sem sucesso
-      Dado que eu estou na página inicial
-      Quando eu preencher o campo "ingredient_name" com "\n"
-      E eu pressionar a tecla Enter
-      Então eu não deveria ver o ingrediente "\n"
+  @javascript
+  Cenario: Inserção sem sucesso
+    Dado que eu estou na página inicial
+    Quando eu preencher o campo "ingredient_name" com "\n"
+    E eu pressionar a tecla Enter
+    Então eu não deveria ver o ingrediente "\n"
