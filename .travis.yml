@@ -3,12 +3,12 @@ rvm:
   - 2.0.0
 
 before_script:
+  - cd $TRAVIS_BUILD_DIR/back_end
   - bundle install
   - bundle exec rake db:migrate
   - bundle exec rails s -d
 
 script:
-  - cd $TRAVIS_BUILD_DIR/back_end
   - bundle exec rake db:test:prepare
   - bundle exec rake spec
   - bundle exec rake cucumber
