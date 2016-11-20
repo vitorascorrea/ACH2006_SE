@@ -8,6 +8,7 @@ before_script:
   - bundle exec rails s -d
 
 script:
+  - cd $TRAVIS_BUILD_DIR/back_end
   - bundle exec rake db:test:prepare
   - bundle exec rake spec
   - bundle exec rake cucumber
