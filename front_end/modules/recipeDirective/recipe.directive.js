@@ -15,7 +15,8 @@ function directive(){
 
   function controller($scope, $sce, $http){
     var ctrl = this;
-    ctrl.how_to = $sce.trustAsHtml($scope.recipeObj.how_to);
+
+    $scope.$watch(function(){ return $scope.recipeObj }, function(){ ctrl.how_to = $sce.trustAsHtml($scope.recipeObj.how_to) });
 
     ///////////////////////////
 
