@@ -11,7 +11,11 @@ class IngredientsController < ApplicationController
   end
 
   def create
-    respond_with Ingredient.create(ingredients_params)
+    if !Ingredient.find_by name: ingredients_params[:name]
+      respond_with Ingredient.create(ingredients_params)
+    else
+      respond_with Ingredient.find_by name: ingredients_params[:name]
+    end
   end
 
   def update

@@ -17,3 +17,23 @@ end
 Então(/^eu não deveria ver o ingrediente "([^"]*)"$/) do |valor|
   expect(page).to_not have_content(valor)
 end
+
+Quando(/^eu clicar no link "([^"]*)"$/) do |link|
+  click_link(link, match: :first)
+end
+
+Quando(/^eu clicar no botão "([^"]*)"$/) do |botao|
+  click_button(botao, match: :first)
+end
+
+Quando(/^eu clicar no span "([^"]*)"$/) do |span|
+  page.find(:css, span, match: :first).click
+end
+
+Então(/^eu deveria ver a nota "([^"]*)"$/) do |nota|
+  expect(page).to have_content(nota)
+end
+
+Então(/^eu deveria ver o titulo "([^"]*)"$/) do |titulo|
+  expect(page).to have_content(titulo)
+end

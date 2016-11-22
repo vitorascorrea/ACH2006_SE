@@ -1,0 +1,32 @@
+<div style="position: fixed; z-index: 1000; width: 1030px; right: -5px; top: -5px; height: 100%; background-color: white; margin: 5px;">
+  <a href="#" style="position: fixed; right: 10px; bottom: 0; font-size: 50px; text-decoration: none; color: black" data-toggle="collapse" data-target="#collapser_{{index}}" aria-expanded="false" aria-controls="collapser">X</a>
+
+<div class="row">
+  <div class="col-md-12" style="margin-left: 15px; background-image: url({{recipeObj.img}}); background-size: contain; height: 250px;">
+    <div style="margin-left: -15px; width: 100%; background-color: rgba(0, 0, 0, 0.7); height: 80px; position: absolute; bottom: 25%; text-align: center; color: white; padding-bottom: 20px;">
+        <h1>{{recipeObj.name}}</h1>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3 col-md-offset-1">
+    <h3>Classificação</h3>
+    <div class="rating" style="color: black; width: 160px">
+      ({{recipeObj.rating}})
+      <span id="rate_5" ng-click="$parent.recipesCtrl.setRating(recipeObj, 5)" ng-style="recipeObj.rating >= 5 ? {'color': 'orange'} : {'color': 'lightgray'}">★</span>
+      <span id="rate_4" ng-click="$parent.recipesCtrl.setRating(recipeObj, 4)" ng-style="recipeObj.rating >= 4 ? {'color': 'orange'} : {'color': 'lightgray'}">★</span>
+      <span id="rate_3" ng-click="$parent.recipesCtrl.setRating(recipeObj, 3)" ng-style="recipeObj.rating >= 3 ? {'color': 'orange'} : {'color': 'lightgray'}">★</span>
+      <span id="rate_2" ng-click="$parent.recipesCtrl.setRating(recipeObj, 2)" ng-style="recipeObj.rating >= 2 ? {'color': 'orange'} : {'color': 'lightgray'}">★</span>
+      <span id="rate_1" ng-click="$parent.recipesCtrl.setRating(recipeObj, 1)"ng-style="recipeObj.rating >= 1 ? {'color': 'orange'} : {'color': 'lightgray'}">★</span>
+    </div>
+    <h3>Tempo de preparo</h3>
+    <img src="assets/images/relogio.png" width="20">&nbsp;{{recipeObj.cook_time}} min
+    <h3>Ingredientes</h3>
+  </div>
+  <div class="col-md-7">
+    <h3>Modo de preparo</h3>
+    <span ng-bind-html="recipeCtrl.how_to"></span>
+  </div>
+</div>
+
+</div>

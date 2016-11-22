@@ -1,3 +1,30 @@
-<div class="jumbotron" style="position: absolute; right: 0; height: 630px; width: 100%; overflow-x: scroll">
-  <span ng-if="showRecipes"><img src="assets/images/mock_recipes.png"></span>
+<div class="row">
+  <div class="col-md-4" ng-repeat="recipe in recipes track by $index">
+    <div class="collapse" id="collapser_{{$index}}">
+      <recipe recipe-obj="recipe" index="$index"></recipe>
+    </div>
+    <div class="team text-center">
+      <div class="cover" style="background:url('{{recipe.img}}'); background-size:cover;">
+        <div class="overlay text-center">
+          <div class="row" style="background:rgba(0,0,0,0.5); width: 100%; margin-left: 1px">
+            <div class="col-sm-8 rating">
+              ({{recipe.rating}})
+              <span id="rate_5" ng-click="recipesCtrl.setRating(recipe, 5)" ng-style="recipe.rating >= 5 ? {'color': 'yellow'} : {'color': 'white'}">★</span>
+              <span id="rate_4" ng-click="recipesCtrl.setRating(recipe, 4)" ng-style="recipe.rating >= 4 ? {'color': 'yellow'} : {'color': 'white'}">★</span>
+              <span id="rate_3" ng-click="recipesCtrl.setRating(recipe, 3)" ng-style="recipe.rating >= 3 ? {'color': 'yellow'} : {'color': 'white'}">★</span>
+              <span id="rate_2" ng-click="recipesCtrl.setRating(recipe, 2)" ng-style="recipe.rating >= 2 ? {'color': 'yellow'} : {'color': 'white'}">★</span>
+              <span id="rate_1" ng-click="recipesCtrl.setRating(recipe, 1)"ng-style="recipe.rating >= 1 ? {'color': 'yellow'} : {'color': 'white'}">★</span>
+            </div>
+            <div class="col-sm-4 text-left white">
+              <img src="assets/images/relogio.png" width="20">&nbsp;{{recipe.cook_time}} min
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="title">
+        <h4>{{recipe.name}}</h4>
+      </div>
+      <button data-toggle="collapse" data-target="#collapser_{{$index}}" aria-expanded="false" aria-controls="collapser" class="btn btn-primary btn-lg">Ver receita</button>
+    </div>
+  </div>
 </div>
